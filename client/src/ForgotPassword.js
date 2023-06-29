@@ -7,7 +7,7 @@ const ForgotPassword = () => {
     console.log(e.target.email.value)
 
     axios
-      .post("http://localhost:5000/api/v1/forgot_password", {
+      .post("https://password-reset-ztnv.onrender.com/api/v1/forgot_password", {
         email: e.target.email.value,
       })
       .then((response) => console.log(response.data))

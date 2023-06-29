@@ -10,17 +10,20 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch("http://localhost:5000/api/v1/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-    })
+    const response = await fetch(
+      "https://password-reset-ztnv.onrender.com/api/v1/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      }
+    )
 
     const data = await response.json()
     console.log(data.token)
@@ -39,59 +42,59 @@ const Register = () => {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-            <h1 className="card-title text-center">Register</h1>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3 mx-5">
-                <input
-                  className="form-control"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Name"
-                />
-              </div>
-              <br />
-              <div className="mb-3 mx-5">
-                <input
-                  className="form-control"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email"
-                />
-              </div>
-              <br />
-              <div className="mb-1 mx-5">
-                <input
-                  className="form-control "
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Password"
-                />
-              </div>
-              <br />
-              <div className="text-center">
-                <Link to="/login">
+              <h1 className="card-title text-center">Register</h1>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3 mx-5">
+                  <input
+                    className="form-control"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Name"
+                  />
+                </div>
+                <br />
+                <div className="mb-3 mx-5">
+                  <input
+                    className="form-control"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email"
+                  />
+                </div>
+                <br />
+                <div className="mb-1 mx-5">
+                  <input
+                    className="form-control "
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                  />
+                </div>
+                <br />
+                <div className="text-center">
+                  <Link to="password-reset-tm.netlify.app/login">
+                    <input
+                      className="btn btn-primary my-3 "
+                      type="submit"
+                      value="Already a member? Login"
+                    />
+                  </Link>
+                </div>
+                <div className="text-center">
                   <input
                     className="btn btn-primary my-3 "
                     type="submit"
-                    value="Already a member? Login"
+                    value="Register"
                   />
-                </Link>
-              </div>
-              <div className="text-center">
-                <input
-                  className="btn btn-primary my-3 "
-                  type="submit"
-                  value="Register"
-                />
-              </div>
-            </form>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   )
 }

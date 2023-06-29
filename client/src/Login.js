@@ -9,16 +9,19 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch("http://localhost:5000/api/v1/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    })
+    const response = await fetch(
+      "https://password-reset-ztnv.onrender.com/api/v1/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    )
 
     const data = await response.json()
     console.log(data)
@@ -67,7 +70,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <Link to="/forgot-password">
+                  <Link to="password-reset-tm.netlify.app/forgot-password">
                     <input
                       className="btn btn-primary my-2 "
                       type="submit"

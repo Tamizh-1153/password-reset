@@ -13,7 +13,7 @@ const ResetPassword = () => {
 
     axios
       .post(
-        `http://localhost:5000/api/v1/reset_password/${param.id}/${param.token}`,
+        `https://password-reset-ztnv.onrender.com/api/v1/reset_password/${param.id}/${param.token}`,
         {
           password: e.target.password.value,
         }
