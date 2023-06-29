@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" Component={Register} />
+        <Route path="password-reset-tm.netlify.app" Component={Register} />
         <Route path="password-reset-tm.netlify.app/login" Component={Login} />
         <Route
           path="password-reset-tm.netlify.app/forgot-password"
