@@ -3,6 +3,8 @@ import "./App.css"
 import ResetPassword from './ResetPassword'
 import ForgotPassword from "./ForgotPassword"
 import Login from "./Login"
+import Register from "./Register"
+
 
 
 function App() {
