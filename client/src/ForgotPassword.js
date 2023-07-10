@@ -10,7 +10,10 @@ const ForgotPassword = () => {
       .post("https://password-reset-ztnv.onrender.com/api/v1/forgot_password", {
         email: e.target.email.value,
       })
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        console.log(response.data)
+        alert(response.data.message)
+      })
       .catch((error) => console.log(error))
   }
 
@@ -21,13 +24,14 @@ const ForgotPassword = () => {
           <div className="card">
             <div className="card-body">
               <h3 className="text-center my-5">Forgot Password</h3>
-              <form onSubmit={handleSubmit} >
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3 mx-5">
                   <input
                     className="form-control"
                     type="text"
                     name="email"
                     placeholder="Email"
+                    required={true}
                   />
                 </div>
                 <div className="text-center">

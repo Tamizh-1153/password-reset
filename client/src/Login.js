@@ -49,6 +49,7 @@ const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
+                    required={true}
                   />
                 </div>
                 <br />
@@ -59,6 +60,7 @@ const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password"
+                    required={true}
                   />
                 </div>
                 <br />

@@ -39,6 +39,7 @@ const ResetPassword = () => {
                     type="password"
                     name="password"
                     placeholder="Enter a new password"
+                    required={true}
                   />
                 </div>
                 <div className="text-center">
