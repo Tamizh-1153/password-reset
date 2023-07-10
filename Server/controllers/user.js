@@ -50,7 +50,7 @@ const forgotPassword = async (req, res) => {
       service: "gmail",
       auth: {
         user: "tamizhwork@gmail.com",
-        pass: "hjavmehlknhvlgmj",
+        pass: "qysmmzqzrxpcqktt",
       },
     })
 
@@ -69,7 +69,7 @@ const forgotPassword = async (req, res) => {
       }
     })
 
-    res.send(resetLink)
+    res.json({ message: "Reset Link sent via email", resetLink })
   } catch (err) {
     res.send(err)
   }
