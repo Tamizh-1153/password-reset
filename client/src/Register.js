@@ -75,7 +75,7 @@ const Register = () => {
                 </div>
                 <br />
                 <div className="text-center">
-                  <Link to="password-reset-tm.netlify.app/login">
+                  <Link to="/login">
                     <input
                       className="btn btn-primary my-3 "
                       type="submit"

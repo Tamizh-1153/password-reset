@@ -70,7 +70,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <Link to="password-reset-tm.netlify.app/forgot-password">
+                  <Link to="/forgot-password">
                     <input
                       className="btn btn-primary my-2 "
                       type="submit"
